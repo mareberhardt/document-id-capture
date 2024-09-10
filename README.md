@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# veriff-document-id-capture
+
+## Description
+This project is a React-based application designed for capturing and processing user documents. The application involves navigating through several steps to capture a photo, preview it, and confirm submission. It includes a series of pages with conditional navigation based on user actions.
+
+Tech Stack
+React: A JavaScript library for building user interfaces.
+TypeScript: A superset of JavaScript that adds static types.
+React Router: A library for routing in React applications.
+Jest: A JavaScript testing framework.
+React Testing Library: A set of utilities for testing React components.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Installation
+
+Clone the repository
+  git clone <repository-url>
+
+Navigate to the project directory
+  cd <project-directory>
+
+Install dependencies
+  npm install
 
 ## Available Scripts
 
@@ -39,8 +60,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
+- src/: Contains the main source code of the application.
+  - assets/: images, icons, fonts.
+  - components/: global shared/reusable components, such as layout (wrappers, navigation), form components, buttons.
+    - forms/
+    - layout/
+  - views/: Here's where the main part of my app will live. Any page/screen in my app is a view
+pages/: Page components representing different views of the application.
+public/: Public assets and the main HTML file.s

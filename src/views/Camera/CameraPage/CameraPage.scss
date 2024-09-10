@@ -1,0 +1,115 @@
+.capture-container {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.camera-title,
+.camera-info {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.webcam-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px; /* Limits the maximum width for larger screens */
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.webcam {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  pointer-events: none; /* Ensure the overlay does not block interaction */
+  z-index: 1;
+}
+
+.mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width of clear area */
+  height: 40%; /* Adjust height of clear area */
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.6); /* Dark area outside the mask */
+  background-color: rgba(255, 255, 255, 0.2); /* Almost transparent white background for the mask */
+  z-index: 2;
+  pointer-events: none; /* Ensure mask doesn't block interaction */
+  border-radius: 8px;
+  border: 2px solid red; /* Optional red border for the clear area */
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  /* Optimizing for tablets and smaller screens */
+  .webcam-container {
+    max-width: 300px; /* Smaller width for tablets */
+  }
+
+  .mask {
+    width: 85%; /* Adjust clear mask size for tablets */
+    height: 50%;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Optimizing for mobile phones */
+  .webcam-container {
+    max-width: 300px; /* Smaller width for mobile phones */
+  }
+
+  .mask {
+    width: 90%; /* Adjust clear mask size for mobile */
+    height: 55%;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 20px;
+  }
+}

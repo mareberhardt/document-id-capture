@@ -1,0 +1,22 @@
+$preview-button-color: #27c35a;
+
+.retry-button-container,
+.submit-button-container {
+  position: absolute;
+  bottom: 0;
+  padding: 24px;
+  min-width: 100px;
+  z-index: 2;
+
+  button {
+    background-color: $preview-button-color;
+  }
+}
+
+.retry-button-container {
+  left: 0;
+}
+
+.submit-button-container {
+  right: 0;
+}

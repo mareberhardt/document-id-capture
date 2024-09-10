@@ -1,0 +1,15 @@
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+
+  .confirmation-title,
+  .confirmation-info {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+}
+

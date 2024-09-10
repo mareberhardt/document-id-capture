@@ -1,0 +1,40 @@
+// Define colors and sizing variables for consistency
+$stepper-padding: 0 24px;
+$step-padding: 10px 20px;
+$step-width: 6px;
+
+$step-color-active: #27c35a;
+$step-color-deactivated: #221e1b;
+
+.stepper {
+  padding: $stepper-padding;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+  position: relative;
+
+  .step {
+    width: $step-width;
+    padding: $step-padding;
+    border-bottom: 5px solid $step-color-deactivated;
+    font-weight: bold;
+
+    &.active {
+      border-bottom: 5px solid $step-color-active;
+      color: #fff;
+    }
+
+    &.step.deactivated {
+      border-bottom: 5px solid $step-color-deactivated;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .step a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
