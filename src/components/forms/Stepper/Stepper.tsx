@@ -64,13 +64,13 @@ const Stepper: React.FC = () => {
     <div className="stepper">
       {steps.map((step: Step) => (
         <Link key={step.id} data-testid={`${step.name}`} to={!isStepDisabled(step) ? step.path : '#'} onClick={() => {
-          if (step.id === 5) setConfirmationStepReached(true);
+          if (step.id === 5) setConfirmationStepReached(location.state?.confirmationStepReached);
         }}>
           <div key={step.id} data-testid={`${step.path}`} className={`step ${location.pathname === step.path
-              ? 'active'
-              : isStepDisabled(step)
-                ? 'disabled'
-                : 'deactivated'
+            ? 'active'
+            : isStepDisabled(step)
+              ? 'disabled'
+              : 'deactivated'
             }`}>
           </div>
         </Link>
