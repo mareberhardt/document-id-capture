@@ -15,13 +15,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Installation
 
 Clone the repository
-  git clone <repository-url>
+  ### `git clone <repository-url>`
 
 Navigate to the project directory
-  cd <project-directory>
+  ### `cd <project-directory>`
 
 Install dependencies
-  npm install
+  ### `npm install`
 
 ## Available Scripts
 
