@@ -1,4 +1,4 @@
-# veriff-document-id-capture
+# document-id-capture
 
 ## Description
 This project is a React-based application designed for capturing and processing user documents. The application involves navigating through several steps to capture a photo, preview it, and confirm submission. It includes a series of pages with conditional navigation based on user actions.
